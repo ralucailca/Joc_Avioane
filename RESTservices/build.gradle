@@ -1,0 +1,43 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+
+jar {
+    baseName = 'concurs-rest-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project (':Model')
+    compile project (':Persistence')
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('com.jayway.jsonpath:json-path')
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
+
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+
+    // https://mvnrepository.com/artifact/com.sun.activation/javax.activation
+    compile group: 'com.sun.activation', name: 'javax.activation', version: '1.2.0'
+
+    compile 'org.hibernate:hibernate-core:5.2.10.Final'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

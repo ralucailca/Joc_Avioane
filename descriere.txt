@@ -1,0 +1,14 @@
+Joc Avioane: -Aplicație client-server în Java cu Spring RMI-
+
+Doi jucători pot juca acest joc. Fiecare jucător va alege poziția unui avion pe o tabelă de joc cu dimensiunea 3x3, iar apoi trebuie să 
+ghicească poziția avionului inamic. Fiecare jucător poate să facă:
+-Login- După autentificarea cu succes se deschide o fereastră nouă în care este afișată o tabelă goală de joc pe care jucătorul trebuie 
+	să își aleagă poziția. Când se apasă butonul de pornire al jocului, serverul va alege aleator un alt jucător care a apăsat 
+	butonul de start și căruia nu i-a fost asociat un alt jucător. Dacă nu există un partener, jucătorul intră în așteptare. 
+-Alege poziție- Fiecare jucător, la rândul său, alege o pozitie pe tabla de joc unde crede că este avionul inamic, al celuilalt jucător.
+		Jucătorul inamic vede automat poziția aleasă de celălalt. Dacă avionul inamic este la poziția aleasă atunci jucătorul a 
+		câștigat, altfel jocul continuă cu alegerea celuilalt jucător.
+-Logout-
+
+Aplicația conține și un serviciu REST care permite vizualizarea tuturor jocurilor jucate de un anumit jucător.
+Pentru persistența datelor am utilizat o bază de date relațională (SQLite) și pentru unele din entități maparea se face cu ORM-ul Hibernate.

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="service" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl" value="rmi://192.168.0.128:1099/Examen"/>
+        <!--<property name="serviceUrl" value="rmi://192.168.43.5:1099/Examen"/>-->
+        <!-- <property name="serviceUrl" value="rmi://localhost:1099/Examen"/>-->
+        <property name="serviceInterface" value="services.IService"/>
+    </bean>
+
+</beans>

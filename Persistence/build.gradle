@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project (':Model')
+
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.10.0'
+
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.10.0'
+
+    runtime group: 'org.xerial', name: 'sqlite-jdbc', version: '3.16.1'
+
+    compile 'org.hibernate:hibernate-core:5.2.10.Final'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
+
+    //https://mvnrepository.com/artifact/org.hibernate.dialect/sqlite-dialect
+    //compile group: 'org.hibernate.dialect', name: 'sqlite-org.hibernate.org.hibernate.dialect', version: '0.1.0'
+    compile('javax.xml.bind:jaxb-api:2.3.0')
+    compile('javax.activation:activation:1.1')
+    compile('org.glassfish.jaxb:jaxb-runtime:2.3.0')
+
+    compile 'org.springframework:spring-context:4.3.8.RELEASE'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+}

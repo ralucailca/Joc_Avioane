@@ -1,0 +1,8 @@
+rootProject.name = 'Avioane_MPP'
+include 'Model'
+include 'Persistence'
+include 'Services'
+include 'Server'
+include 'Client'
+include 'RESTservices'
+

@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project (':Model')
+    compile project (':Services')
+    compile project (':Persistence')
+    compile 'org.springframework:spring-context:5.0.4.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
